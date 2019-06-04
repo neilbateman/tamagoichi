@@ -10,8 +10,13 @@ $(document).ready(function()){
 
   let name = $("#tamoName").val();
   let tamo = new Tamagatchi(name);
-
-  $(".showName").text(newTamagatchi.name);
+  $("#satiateLevel").text(tamo.satiateLevel);
+  $("#restLevel").text(tamo.restLevel);
+  $("#happyLevel").text(tamo.happyLevel);
+  tamo.gettingHungry();
+  tamo.getSleepy();
+  tamo.happyDown();
+  $(".showName").text(tamo.name);
 
   $("#feed").click(function(){
     tamo.feed();
