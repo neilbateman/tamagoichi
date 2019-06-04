@@ -1,65 +1,70 @@
+import $ from 'jquery';
 export class Tamagatchi {
-    constructor(name){
+    constructor(name) {
         this.name = name;
         this.satiateLevel = 10;
         this.happyLevel = 10;
-        this.restLevel  = 10;
+        this.restLevel = 10;
     }
 
-    killTamagatchi() {
-      if(this.satiateLevel === 0 || this.happyLevel === 0 || this. restLevel === 0)
-      {
-        return true;
-      } else return false;
-    }
+    // killTamagatchi() {
+    //     if (this.satiateLevel === 0 || this.happyLevel === 0 || this.restLevel === 0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 
+ 
     gettingHungry() {
         setInterval(() => {
-         this.satiateLevel--;
+            this.satiateLevel--;
+            $("#satiateLevel").html(this.satiateLevel);
         }, 1000);
     }
 
-     screams() {
+    screams() {
         if (this.satiateLevel > 0) {
             return false;
-        } else {
-            return alert(`Feed me NOW!`);
-        }
-    }
+      }
+   }
 
     feed() {
-        this.satiateLevel = 10;
+        console.log(20);
+        this.satiateLevel += 5;
     }
-    pet() {
-      this.happyLevel++;
-    }
-    exercise() {
-      this.happyLevel++ && this.restLevel++;
-    }
+
+
     happyDown() {
-      setInterval(() => {
-        this.happyLevel--;
-     }, 1000);
+        setInterval(() => {
+            this.happyLevel--;
+            $("#happyLevel").html(this.happyLevel);
+        }, 1000);
     }
 
-    cries(){
-        if(this.happyLevel > 0) {
+    cries() {
+        if (this.happyLevel > 0) {
             return false;
-        } else{
-            return console.log("Waahhhhhhh");
-         }
-     }
-       jumpRope() {
-        this.happyLevel ++;
+      }
+    }
+    jumpRope() {
+        this.happyLevel++;
     }
 
-        getSleepy() {
-            setInterval(() => {
-                this.sleepLevel--;
-            }, 1000);
+    getSleepy() {
+        setInterval(() => {
+            this.restLevel--;
+            $("#restLevel").html(this.restLevel);
+        }, 1000);
+    }
 
-        }
-        sleep(){
-            this.restLevel = 20;
-        }
+    sleep() {
+        this.restLevel = 20;
+    }
+
+    noddingOff(){
+        if(this.restLevel > 0){ 
+            return false;
+       }
+     }
     }

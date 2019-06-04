@@ -6,104 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tamagatchi</title>
 </head>
-<body style="https://hobbybite.com/userfiles/images/tamagotchiwhitepink.jpg;">
-    <img src="https://hobbybite.com/userfiles/images/tamagotchiwhitepink.jpg">
-    <div class="container">
-    <p>Happy Level: <span id="playLevel"></span></p>
-    <p>Fullness: <span id="satiateLevel"></span></p>
-    <p>Rest Level: <span id="restLevel"></span></p>
-    <div id="info">
-      <form id="name">
-        <div class="form-group">
-          <label for="tamoName">Enter Tamagotchi Name:</label>
-          <input type="text" name="tamoName" id="tamoName" class="form-control">
-          <br>
-          <button type="submit" name="button" class="btn btn-secondary" id="myTamagotchi">Create Tamagotchi</button>
-        </div>
+<body>
+  <div class = "grid-container">
+    <div class = "item1">Take Care Of Your Pet</div>
+    <div class = "item2">
+      <form id= "name">
+          <div class="form-group">
+              <label for="tamoName">Enter Tamagotchi Name:</label>
+              <input type="text" name="tamoName" id="tamoName" class="form-control">
+              <br>
+              <button type="submit" name="button" class="btn btn-secondary" id="tamoName">Create Tamagotchi</button>
+            </div>
+            <div id="tamoStats">
+                <p>Happy Level: <span id="happyLevel"></span></p>
+                <p>Fullness: <span id="satiateLevel"></span></p>
+                <p>Rest Level: <span id="restLevel"></span></p>
+            </div>
       </form>
+     <div  id="kill">RIP <span class="showName"></span></div>
     </div>
-<div id="tamoStats">
-  <div id="kill"><h1>You killed <span class="showName"></span></h1></div>
-    <button id="feed" type= "button" class="btn btn-success">Feed</button>
-    <button id="pet"type= "button" class="btn btn-success">Pet</button>
-    <button id="exercise"type= "button" class="btn btn-success">Exercise</button>
-    <h1 class="showName"></h1>
-</div>
+    <div class="item3">
+        <img id ="imgPic" src="img/tamagotchiwhitepink.jpg" alt="">
+    </div>
+    <div class ="item4">
+
+        <button id="feed" type= "button" class="btn btn-success">Feed</button>
+        <button id="jumpRope"type= "button" class="btn btn-success">Jump Rope</button>
+        <button id="rest"type= "button" class="btn btn-success">Rest</button>
+        <br>
+        <h1 class="showName"></h1>
+    </div>
 
 
+  </div>
+
+   
 </body>
 </html>
 
-<!-- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Droppable - Visual feedback</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-  #draggable, #draggable2 { width: 90px; height: 90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; <img src="https://hobbybite.com/userfiles/images/tamagotchiwhitepink.jpg">}
-  #droppable, #droppable2 { width: 120px; height: 120px; padding: 0.5em; float: left; margin: 10px; }
-  h3 { clear: left; }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#draggable" ).draggable();
-    $( "#droppable" ).droppable({
-      classes: {
-        "ui-droppable-hover": "ui-state-hover"
-      },
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-            .html( "Dropped!" );
-      }
-    });
-
-    $( "#draggable2" ).draggable();
-    $( "#droppable2" ).droppable({
-      accept: "#draggable2",
-      classes: {
-        "ui-droppable-active": "ui-state-default"
-      },
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-            .html( "Dropped!" );
-      }
-    });
-  } );
-  </script>
-</head>
-<body>
-
-<h3>Give Tamagatchi food!:</h3>
-
-<div id="draggable" class="ui-widget-content">
-
-        <img src="https://hobbybite.com/userfiles/images/tamagotchiwhitepink.jpg">
-
-</div>
-
-<div id="droppable" class="ui-widget-header">
-  <p>Drop here</p>
-</div>
-
-<h3>Feedback on activating draggable:</h3>
-
-<div id="draggable2" class="ui-widget-content">
-  <p>Let Tamo sleep!</p>
-</div>
-
-<div id="droppable2" class="ui-widget-header">
-  <p>Drop here</p>
-</div>
-
-
-</body>
-</html> -->
