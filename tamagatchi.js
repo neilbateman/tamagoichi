@@ -6,6 +6,13 @@ export class Tamagatchi {
         this.restLevel  = 10;
     }
 
+    killTamagatchi() {
+      if(this.satiateLevel === 0 || this.happyLevel === 0 || this. restLevel === 0)
+      {
+        return true;
+      } else return false;
+    }
+
     gettingHungry() {
         setInterval(() => {
          this.satiateLevel--;

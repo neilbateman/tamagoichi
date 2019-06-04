@@ -18,6 +18,17 @@ $(document).ready(function()){
   tamo.happyDown();
   $(".showName").text(tamo.name);
 
+
+let countDown = setInterval(function(){
+
+  $("#satiateLevel").text(tamo.satiateLevel);
+  $("#restLevel").text(tamo.restLevel);
+  $("#happyLevel").text(tamo.happyLevel);
+  if(tamo.killTamagatchi()) {
+    $("#kill").show();
+    $("#tamoStats").hide();
+  }
+}, 1000)
   $("#feed").click(function(){
     tamo.feed();
   })
@@ -27,6 +38,8 @@ $(document).ready(function()){
   $("#exercise").click(function(){
     tamo.exercise();
   })
+
+
 
   })
 }
