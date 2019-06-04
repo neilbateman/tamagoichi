@@ -23,7 +23,12 @@ export class Tamagatchi {
     feed() {
         this.satiateLevel = 10;
     }
-
+    pet() {
+      this.happyLevel++;
+    }
+    exercise() {
+      this.happyLevel++ && this.restLevel++;
+    }
     happyDown() {
       setInterval(() => {
         this.happyLevel--;
@@ -43,7 +48,7 @@ export class Tamagatchi {
 
         getSleepy() {
             setInterval(() => {
-                this.sleepLevel--; 
+                this.sleepLevel--;
             }, 1000);
 
         }
@@ -51,7 +56,3 @@ export class Tamagatchi {
             this.restLevel = 20;
         }
     }
-
-  
-
- 

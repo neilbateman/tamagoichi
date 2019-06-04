@@ -5,9 +5,20 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-$(document).ready(function(){
-    $("getMethod").submit(function(event){
-        event.preventDefault();
-        $("select[name=lst_MonthDrop]").change(function() {
-    })
-})
+let tamo = new Tamagatchi("Tamo");
+
+
+
+document.querySelector("#btnPet").addEventListener("click", function(){
+    tamo.pet();
+});
+
+
+document.querySelector("#btnFeed").addEventListener("click", function(){
+    tamo.feed();
+
+});
+document.querySelector("#btnExercise").addEventListener("click", function(){
+    tamo.exercise();
+
+});
