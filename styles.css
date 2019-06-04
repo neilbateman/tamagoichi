@@ -1,0 +1,12 @@
+body {
+    background-color: #7FDBFF;
+  }
+
+  img {
+      width: 25%;
+      max-width: 100%;
+  }
+
+  #tamoStats {
+    display: none;
+  }
